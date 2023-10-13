@@ -1,0 +1,50 @@
+FINAL CONCENTRATIONS OF LIQUIDS
+Difficulty level:Easy
+
+------------------------------------------------------------------------------------------------------
+
+In a chemistry lab there are liquids of different concentrations.The concentration of the liquids changes if it gets mixed with the liquid of lesser concentration.You are given an integer array "arr" where arr[i] is the concentration of the ith item in the lab.The concentration of the ith liquid will reduce its concentration equivalent to arr[j] where j is the minimum index such that j > i and arr[j] <= arr[i]. Otherwise, the concentration remains same.
+
+Return an integer array answer where answer[i] is the final concentration of the ith liquid in the lab.
+
+-----------------------------------------------------------------------------------------------------
+
+Input Format:
+
+->The first line of input contains T denoting the number of testcases.
+Then the testcases follow.
+
+->The first line of each testcase contains array of integers seperated
+ by space denoting concentration of each liquid.
+
+-----------------------------------------------------------------------------------------------------
+
+Output Format:
+
+->The Output consists of single line which contains the array of integers denoting 
+the final concentrations of the liquids.
+
+-----------------------------------------------------------------------------------------------------
+
+Constraints:
+1<=T<=10
+1 <= arr.length <= 500
+1 <= arr[i] <= 1000
+-----------------------------------------------------------------------------------------------------
+
+Sample Input:
+1
+8 4 6 2 3
+
+-----------------------------------------------------------------------------------------------------
+
+Sample Output:
+4 2 4 2 3
+
+-----------------------------------------------------------------------------------------------------
+
+Explanation:
+For liquid 0 with arr[0]=8 the concentration reduces equivalent to arr[1]=4, therefore, the final concentration is 8 - 4 = 4.
+For liquid 1 with arr[1]=4 the concentration reduces equivalent to arr[3]=2, therefore, the final concentration is 4 - 2 = 2.
+For liquid 2 with arr[2]=6 the concentration reduces equivalent to arr[3]=2, therefore, the final concentration is 6 - 2 = 4.
+For liquid 3 and 4 the concentration remains same.
